@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "br.edu.ifsp.scl.ads.prdm.sc3011704.havagas"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "br.edu.ifsp.scl.ads.prdm.sc3011704.havagas"
