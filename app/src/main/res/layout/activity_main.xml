@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_margin="5dp"
-        android:text="Nome:"
+        android:text="@string/nome"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -23,7 +23,7 @@
         android:id="@+id/nome_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Digite seu nome"
+        android:hint="@string/digite_seu_nome"
         android:inputType="textPersonName"
         android:padding="5dp"
         android:layout_margin="5dp"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_margin="5dp"
-        android:text="E-mail:"
+        android:text="@string/e_mail"
         app:layout_constraintTop_toBottomOf="@+id/nome_et"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_margin="5dp"
-        android:hint="Digite seu email"
+        android:hint="@string/digite_seu_email"
         android:inputType="textEmailAddress"
         app:layout_constraintTop_toBottomOf="@+id/email_tv"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_margin="5dp"
-        android:text="Receber vagas por email"
+        android:text="@string/receber_vagas_por_email"
         app:layout_constraintTop_toBottomOf="@+id/email_et"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_margin="5dp"
-        android:text="Telefone:"
+        android:text="@string/telefone"
         app:layout_constraintTop_toBottomOf="@+id/receber_email_cb"
         />
 
@@ -95,7 +95,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Telefone fixo"
+            android:text="@string/telefone_fixo"
 
             />
         <RadioButton
@@ -104,7 +104,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Telefone celular"/>
+            android:text="@string/telefone_celular"/>
 
         <EditText
             android:id="@+id/telefone_et"
@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:layout_margin="5dp"
-            android:hint="Digite seu telefone"
+            android:hint="@string/digite_seu_telefone"
             android:inputType="phone"
             app:layout_constraintTop_toBottomOf="@+id/telefone_rg"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -128,7 +128,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_margin="5dp"
-        android:text="Sexo:"
+        android:text="@string/sexo"
         app:layout_constraintTop_toBottomOf="@+id/telefone_rg"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -149,16 +149,29 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Masculino"/>
+            android:text="@string/masculino"/>
         <RadioButton
             android:id="@+id/feminino_rb"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Feminino"
+            android:text="@string/feminino"
             />
-
     </RadioGroup>
+    <EditText
+        android:id="@+id/vagas_interesse_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:hint="@string/digite_suas_vagas_de_interesse"
+        android:inputType="textImeMultiLine"
+        android:minLines="3"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@+id/sexo_rg"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
