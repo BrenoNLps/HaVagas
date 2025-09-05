@@ -6,6 +6,7 @@ import android.widget.AdapterView
 import android.widget.EditText
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -62,8 +63,52 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        binding.enviarBt.setOnClickListener {
+            val nome = binding.nomeEt.text.toString()
+            val email = binding.emailEt.text.toString()
+            val receberEmail = when(binding.receberEmailCb.isChecked){
+                true -> "Sim"
+                false -> "Não"
+            }
+            val telefone = binding.telefoneEt.text.toString()
+            val sexo = when (binding.sexoRg.checkedRadioButtonId) {
+                R.id.masculino_rb -> "Masculino"
+                R.id.feminino_rb -> "Feminino"
+                else -> ""
+                }
+            val formacao = binding.formacaoSpinner.selectedItem.toString()
+            val vagasInteresse = binding.vagasInteresseEt.text.toString()
+            val camposAdicionais = mutableListOf<String>()
+            for (i in 0 until binding.camposAdicionais.childCount) {
+                val campo = binding.camposAdicionais.getChildAt(i) as EditText
+                if (campo.text.isNotEmpty()) {
+                    camposAdicionais.add(campo.text.toString())
+                }
+                else{
+                    camposAdicionais.add("Não informado")
 
+                }
+                val mensagem = """
+                    Nome: $nome
+                    E-mail: $email
+                    Receber vagas por e-mail: $receberEmail
+                    Telefone: $telefone
+                    Sexo: $sexo
+                    Formação: $formacao
+                    Sobre Formação: ${camposAdicionais.joinToString(", ")}
+                    Vagas de Interesse: $vagasInteresse
+                """.trimIndent()
 
+                AlertDialog.Builder(this)
+                    .setTitle("Confirmação")
+                    .setMessage(mensagem)
+                    .setPositiveButton("OK") { _, _ -> }
+                    .setNegativeButton("Cancelar") { _, _ -> }
+                    .show()
+
+            }
+
+        }
     }
 
     private fun criarCampo(hint: String): EditText {
