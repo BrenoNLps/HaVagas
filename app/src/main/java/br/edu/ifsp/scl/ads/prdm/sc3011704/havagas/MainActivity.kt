@@ -50,6 +50,20 @@ class MainActivity : AppCompatActivity() {
 
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
+
+        binding.telefoneRg.setOnCheckedChangeListener { _, checkedId ->
+            when (checkedId) {
+                R.id.telefone_fixo_rb,R.id.telefone_celular_rb -> {
+                    binding.telefoneEt.visibility = View.VISIBLE
+                }
+                else -> {
+                    binding.telefoneEt.visibility = View.GONE
+                }
+            }
+        }
+
+
+
     }
 
     private fun criarCampo(hint: String): EditText {

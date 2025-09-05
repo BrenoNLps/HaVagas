@@ -110,20 +110,20 @@
                 android:textAlignment="center"
                 android:text="@string/telefone_celular"/>
 
-            <EditText
-                android:id="@+id/telefone_et"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:layout_margin="5dp"
-                android:hint="@string/digite_seu_telefone"
-                android:inputType="phone"
-                app:layout_constraintTop_toBottomOf="@+id/telefone_rg"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                android:visibility="gone"
-                />
         </RadioGroup>
+        <EditText
+            android:id="@+id/telefone_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:hint="@string/digite_seu_telefone"
+            android:inputType="phone"
+            app:layout_constraintTop_toBottomOf="@+id/telefone_rg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone"
+            />
 
 
         <TextView
@@ -133,7 +133,7 @@
             android:padding="5dp"
             android:layout_margin="5dp"
             android:text="@string/sexo"
-            app:layout_constraintTop_toBottomOf="@+id/telefone_rg"
+            app:layout_constraintTop_toBottomOf="@+id/telefone_et"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             />
