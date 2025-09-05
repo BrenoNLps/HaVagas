@@ -159,19 +159,31 @@
             android:text="@string/feminino"
             />
     </RadioGroup>
-    <EditText
-        android:id="@+id/vagas_interesse_et"
+
+    <TextView
+        android:id="@+id/vagas_interesse_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_margin="5dp"
-        android:hint="@string/digite_suas_vagas_de_interesse"
-        android:inputType="textImeMultiLine"
-        android:minLines="3"
-        android:gravity="top"
+        android:text="@string/vagas_de_interesse"
         app:layout_constraintTop_toBottomOf="@+id/sexo_rg"
         />
-
+    <EditText
+        android:id="@+id/vagas_interesse_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:hint="@string/digite_suas_vagas_de_interesse"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        android:gravity="top"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/vagas_interesse_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="5dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
