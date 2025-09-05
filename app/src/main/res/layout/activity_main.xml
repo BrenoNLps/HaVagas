@@ -185,5 +185,16 @@
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteX="5dp" />
 
+    <Button
+        android:id="@+id/enviar_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:text="@string/salvar"
+        app:layout_constraintTop_toBottomOf="@+id/vagas_interesse_et"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
