@@ -15,6 +15,7 @@
     <string name="digite_suas_vagas_de_interesse">Digite suas vagas de interesse</string>
     <string name="vagas_de_interesse">Vagas de interesse:</string>
     <string name="salvar">Salvar</string>
+    <string name="formacao">Formacao:</string>
     <string-array name="formacoes">
         <item>Fundamental</item>
         <item>Médio</item>
