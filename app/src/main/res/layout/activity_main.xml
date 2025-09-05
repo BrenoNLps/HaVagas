@@ -105,20 +105,60 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:text="Telefone celular"/>
+
+        <EditText
+            android:id="@+id/telefone_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:hint="Digite seu telefone"
+            android:inputType="phone"
+            app:layout_constraintTop_toBottomOf="@+id/telefone_rg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone"
+            />
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/telefone_et"
+
+    <TextView
+        android:id="@+id/sexo_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_margin="5dp"
-        android:hint="Digite seu telefone"
-        android:inputType="phone"
+        android:text="Sexo:"
         app:layout_constraintTop_toBottomOf="@+id/telefone_rg"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:visibility="gone"
         />
+    <RadioGroup
+        android:id="@+id/sexo_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/sexo_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+        <RadioButton
+            android:id="@+id/masculino_rb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Masculino"/>
+        <RadioButton
+            android:id="@+id/feminino_rb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Feminino"
+            />
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
