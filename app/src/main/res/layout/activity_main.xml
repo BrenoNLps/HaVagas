@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_margin="5dp"
-        android:text="Hello World!"
+        android:text="Nome:"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -23,7 +23,7 @@
         android:id="@+id/nome_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Digite seu nome:"
+        android:hint="Digite seu nome"
         android:inputType="textPersonName"
         android:padding="5dp"
         android:layout_margin="5dp"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_margin="5dp"
-        android:text="Hello World!"
+        android:text="E-mail:"
         app:layout_constraintTop_toBottomOf="@+id/nome_et"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_margin="5dp"
-        android:hint="Digite seu email:"
+        android:hint="Digite seu email"
         android:inputType="textEmailAddress"
         app:layout_constraintTop_toBottomOf="@+id/email_tv"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -68,6 +68,43 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
+    <TextView
+        android:id="@+id/telefone_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:text="Telefone:"
+        app:layout_constraintTop_toBottomOf="@+id/receber_email_cb"
+        />
 
+    <RadioGroup
+        android:id="@+id/telefone_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/telefone_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <RadioButton
+            android:id="@+id/telefone_fixo_rb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Telefone fixo"
+
+            />
+        <RadioButton
+            android:id="@+id/telefone_celular_rb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Telefone celular"/>
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
