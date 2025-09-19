@@ -1,5 +1,5 @@
 # 💼 HaVagas — App de Cadastro para Oportunidades de Emprego  
-Aplicativo simples de cadastro de usuários interessados em vagas de trabalho, desenvolvido com foco em boas práticas de UI e lógica de formulários.
+Aplicativo Android desenvolvido para cadastrar usuários interessados em vagas de trabalho, com campos dinâmicos e validação de dados.
 
 ![HaVagas](image/capa.png)
 
@@ -8,19 +8,19 @@ Aplicativo simples de cadastro de usuários interessados em vagas de trabalho, d
 ## 🙋‍♀️ Sobre o projeto
 
 Esse app foi desenvolvido como parte da disciplina **Programação para Dispositivos Móveis** no **IFSP - São Carlos**.  
-O objetivo foi aplicar conceitos de interface, componentes dinâmicos e validação de dados em um formulário completo.
+O objetivo foi aplicar conceitos de interface, lógica condicional e manipulação de componentes visuais com Kotlin.
 
 ---
 
 ## ✨ O que ele faz
 
-- Cadastro de nome, e-mail, telefone e celular  
-- Opção para receber atualizações por e-mail  
-- Identificação do tipo de telefone (comercial ou residencial)  
-- Campos dinâmicos para celular e formação acadêmica  
-- Seleção de sexo e data de nascimento  
+- Cadastro completo com nome, e-mail, telefone, sexo e formação  
+- Campos adicionais dinâmicos conforme o nível de formação selecionado  
+- Identificação do tipo de telefone (fixo ou celular) com exibição condicional  
+- Checkbox para receber vagas por e-mail  
 - Campo aberto para vagas de interesse  
-- Botões de salvar (com pop-up de resumo) e limpar formulário
+- Botão de envio que exibe os dados preenchidos em um `AlertDialog`  
+- Botão para limpar os campos (implementação opcional)
 
 ---
 
@@ -28,15 +28,15 @@ O objetivo foi aplicar conceitos de interface, componentes dinâmicos e validaç
 
 - **Kotlin** — linguagem principal  
 - **ViewBinding** — para facilitar a ligação entre layout e código  
-- **Componentes de UI do Android Studio** — como `EditText`, `RadioButton`, `CheckBox`, `Spinner`, `DatePicker`, entre outros
+- **Componentes de UI do Android** — como `EditText`, `RadioGroup`, `Spinner`, `CheckBox`, `AlertDialog`, entre outros
 
 ---
 
 ## 📂 Estrutura básica
 
 Toda a lógica está na `MainActivity.kt`.  
-Os campos são exibidos ou ocultados dinamicamente conforme as seleções do usuário.  
-Ao clicar em **Salvar**, os dados preenchidos são exibidos em um `Toast` ou `AlertDialog` para confirmação.
+A função `criarCampo(hint: String)` é usada para gerar dinamicamente os campos adicionais de acordo com a formação selecionada no `Spinner`.  
+O botão de envio (`enviarBt`) coleta os dados dos campos e exibe um resumo em um `AlertDialog`.
 
 ---
 
