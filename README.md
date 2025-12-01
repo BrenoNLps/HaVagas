@@ -44,4 +44,4 @@ O botão de envio (`enviarBt`) coleta os dados dos campos e exibe um resumo em u
 
 1. Clone o repositório:  
    ```bash
-   git clone https://github.com/seu-usuario/havagas-app.git
+   git clone https://github.com/BrenoNLps/havagas-app.git
