@@ -1,14 +1,14 @@
-# 💼 HaVagas — App de Cadastro para Oportunidades de Emprego  
-Aplicativo Android desenvolvido para cadastrar usuários interessados em vagas de trabalho, com campos dinâmicos e validação de dados.
-
-![HaVagas](image/capa.png)
-
----
-
 ## 🙋‍♀️ Sobre o projeto
 
 Esse app foi desenvolvido como parte da disciplina **Programação para Dispositivos Móveis** no **IFSP - São Carlos**.  
 O objetivo foi aplicar conceitos de interface, lógica condicional e manipulação de componentes visuais com Kotlin.
+
+---
+
+# 💼 HaVagas — App de Cadastro para Oportunidades de Emprego  
+Aplicativo Android desenvolvido para cadastrar usuários 
+
+![HaVagas](image/capa.png)
 
 ---
 
